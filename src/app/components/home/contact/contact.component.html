@@ -1,0 +1,71 @@
+<div id="contact" class="my-12 lg:my-24 relative text-white">
+    <div class="hidden lg:flex flex-col items-center absolute top-24 -right-8">
+        <span
+            class="bg-[#1a1443] w-fit text-white rotate-90 p-2 px-5 text-xl rounded-md uppercase tracking-widest font-semibold">
+            Contact
+        </span>
+        <span class="h-36 w-[2px] bg-[#1a1443]"></span>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+        <app-contact-form></app-contact-form>
+
+        <div class="lg:py-6">
+            <h3 class="text-2xl md:text-3xl font-bold text-[#16f2b3] mb-8">Contact Details</h3>
+
+            <div class="flex flex-col gap-8">
+                <div class="flex items-center gap-5 group">
+                    <div
+                        class="flex items-center justify-center bg-[#1a1443] text-[#16f2b3] w-12 h-12 rounded-full border border-[#25213b] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#16f2b3] group-hover:text-black shadow-lg shadow-pink-500/10">
+                        <fa-icon [icon]="faEnvelope" size="lg"></fa-icon>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-0.5">Email</span>
+                        <span
+                            class="text-base md:text-lg text-gray-300 transition-colors group-hover:text-[#16f2b3] break-all">{{personalData.email}}</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-5 group">
+                    <div
+                        class="flex items-center justify-center bg-[#1a1443] text-[#16f2b3] w-12 h-12 rounded-full border border-[#25213b] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#16f2b3] group-hover:text-black shadow-lg shadow-pink-500/10">
+                        <fa-icon [icon]="faPhone" size="lg"></fa-icon>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-0.5">Phone</span>
+                        <span
+                            class="text-base md:text-lg text-gray-300 transition-colors group-hover:text-[#16f2b3]">{{personalData.phone}}</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-5 group">
+                    <div
+                        class="flex items-center justify-center bg-[#1a1443] text-[#16f2b3] w-12 h-12 rounded-full border border-[#25213b] transition-all duration-300 group-hover:scale-110 group-hover:bg-[#16f2b3] group-hover:text-black shadow-lg shadow-pink-500/10">
+                        <fa-icon [icon]="faLocationDot" size="lg"></fa-icon>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-0.5">Location</span>
+                        <span
+                            class="text-base md:text-lg text-gray-300 transition-colors group-hover:text-[#16f2b3]">{{personalData.address}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 md:mt-16">
+                <h4 class="text-sm uppercase tracking-[0.2em] text-gray-500 font-bold mb-6">Connect with me</h4>
+                <div class="flex flex-wrap items-center gap-4">
+                    <a [href]="personalData.github" target="_blank"
+                        class="p-3 bg-[#1a1443] rounded-full text-white border border-[#25213b] transition-all duration-300 hover:scale-110 hover:bg-[#16f2b3] hover:text-black hover:-translate-y-1 shadow-md"
+                        title="GitHub">
+                        <fa-icon [icon]="faGithub" size="xl"></fa-icon>
+                    </a>
+                    <a [href]="personalData.linkedIn" target="_blank"
+                        class="p-3 bg-[#1a1443] rounded-full text-white border border-[#25213b] transition-all duration-300 hover:scale-110 hover:bg-[#16f2b3] hover:text-black hover:-translate-y-1 shadow-md"
+                        title="LinkedIn">
+                        <fa-icon [icon]="faLinkedin" size="xl"></fa-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

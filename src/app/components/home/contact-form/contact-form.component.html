@@ -1,0 +1,68 @@
+<div class="glow-card p-6 md:p-10 relative bg-[#11152c] border-[#25213b] rounded-xl overflow-hidden backdrop-blur-md">
+    <img src="assets/blur-23.svg" alt="Glow"
+        class="absolute bottom-0 left-0 opacity-50 -z-10 w-full h-full object-cover">
+
+    <div class="relative">
+        <h2 class="text-2xl md:text-3xl font-bold text-[#16f2b3] mb-2">Get in Touch</h2>
+        <p class="text-gray-400 text-sm md:text-base mb-8">
+            I'm always open to new opportunities and collaborations. Drop me a message!
+        </p>
+
+        <form (ngSubmit)="handleSendMail($event)" class="flex flex-col gap-6">
+            <div class="flex flex-col gap-2">
+                <label class="text-xs uppercase tracking-widest text-gray-500 font-semibold ml-1">Your Name</label>
+                <div class="relative group">
+                    <input
+                        class="w-full rounded-lg border border-[#353a52] bg-[#1a1443]/50 px-4 py-3 text-sm text-white outline-none transition-all duration-300 focus:border-[#16f2b3] focus:ring-1 focus:ring-[#16f2b3]/20"
+                        type="text" name="name" [(ngModel)]="userInput.name" placeholder="John Doe" required />
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label class="text-xs uppercase tracking-widest text-gray-500 font-semibold ml-1">Your Email</label>
+                <div class="relative group">
+                    <input
+                        class="w-full rounded-lg border border-[#353a52] bg-[#1a1443]/50 px-4 py-3 text-sm text-white outline-none transition-all duration-300 focus:border-[#16f2b3] focus:ring-1 focus:ring-[#16f2b3]/20"
+                        type="email" name="email" [(ngModel)]="userInput.email" placeholder="john@example.com"
+                        required />
+                </div>
+                <p *ngIf="error.email" class="text-red-500 text-xs mt-1 ml-1 animate-pulse">
+                    Please enter a valid email address
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <label class="text-xs uppercase tracking-widest text-gray-500 font-semibold ml-1">Message</label>
+                <textarea
+                    class="h-32 w-full rounded-lg border border-[#353a52] bg-[#1a1443]/50 px-4 py-3 text-sm text-white outline-none transition-all duration-300 focus:border-[#16f2b3] focus:ring-1 focus:ring-[#16f2b3]/20 resize-none"
+                    name="message" [(ngModel)]="userInput.message" placeholder="Feel free to ask me anything..."
+                    required></textarea>
+                <p *ngIf="error.required" class="text-red-500 text-xs mt-1 ml-1 animate-pulse">
+                    Please fill in all required fields
+                </p>
+            </div>
+
+            <button
+                class="flex justify-center items-center gap-2 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-8 py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-white no-underline transition-all duration-300 ease-out hover:shadow-[0_0_20px_rgba(236,72,153,0.5)] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed group"
+                type="submit" [disabled]="isLoading">
+                <ng-container *ngIf="isLoading; else notLoading">
+                    <fa-icon [icon]="mailIcon" class="animate-bounce"></fa-icon>
+                    <span>Sending...</span>
+                </ng-container>
+                <ng-template #notLoading>
+                    <span>Send Message</span>
+                    <fa-icon [icon]="mailIcon"
+                        class="transition-transform duration-300 group-hover:translate-x-1"></fa-icon>
+                </ng-template>
+            </button>
+
+            <div class="min-h-[24px]">
+                <div *ngIf="statusMessage"
+                    [ngClass]="{'text-green-500': statusMessage.includes('success'), 'text-red-500': !statusMessage.includes('success')}"
+                    class="text-center text-sm font-medium">
+                    {{ statusMessage }}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
