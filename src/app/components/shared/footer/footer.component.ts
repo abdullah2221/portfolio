@@ -16,4 +16,5 @@ export class FooterComponent {
   starIcon = faStar;
   forkIcon = faCodeFork;
   personalData = personalData;
+  currentYear = new Date().getFullYear();
 }

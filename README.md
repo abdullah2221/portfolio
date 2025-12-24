@@ -2,6 +2,8 @@
 
 > This is a modern, responsive, and customizable portfolio website built with Angular 19.
 
+**Live Demo**: [https://portfolio-tau-two-dh6ohma0ee.vercel.app/](https://portfolio-tau-two-dh6ohma0ee.vercel.app/)
+
 <p align="center">
   <img src="https://github.com/abdullah2221/ng-dev-folio-main/blob/main/screenshot.png?raw=true" alt="Portfolio Screenshot"/>
 </p>
@@ -27,7 +29,7 @@ This portfolio showcases the work, skills, and professional journey of **Abdulla
 
 2. **Install dependencies**
    ```bash
-   npm install --legacy-peer-deps
+   npm install
    ```
 
 3. **Set up environment**
@@ -49,12 +51,17 @@ Edit `src/utils/data/personal-data.ts` to change your name, bio, and social link
 ### Projects
 Edit `src/utils/data/projects-data.ts` to showcase your own work.
 
-## 🙏 Acknowledgments
-
-- **Original Template**: Based on [NgDevFolio](https://github.com/JaveedIshaq/ng-dev-folio) by Javeed Ishaq.
-- **Inspiration**: Original design inspired by [Abu Said](https://github.com/said7388/developer-portfolio).
-- **Frameworks**: Angular 19, Tailwind CSS, FontAwesome.
 
 ---
 
-Made with ❤️ by **Abdullah**
+<div align="center">
+  <h3>Let's Forge Something Great!</h3>
+  <p>
+    <b>Crafted & Engineered by Abdullah</b><br>
+    <i>Next-Gen Frontend Developer</i><br>
+    <a href="mailto:abdullahr797@gmail.com">abdullahr797@gmail.com</a>
+  </p>
+  <p>
+    Designed with precision and ❤️ using Angular 19.
+  </p>
+</div>

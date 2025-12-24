@@ -10,5 +10,6 @@ I also have experience in FastAPI, Firebase, and SQL databases.`,
   address: 'Pakistan',
   github: 'https://github.com/abdullah2221',
   linkedIn: 'https://www.linkedin.com/in/abdullah-63a1a0199/',
-  resume: "https://drive.google.com/file/d/11ppTzCym0CqvYTCqk5qXgmgQkRq-QkHP/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/11ppTzCym0CqvYTCqk5qXgmgQkRq-QkHP/view?usp=sharing",
+  repo: 'https://github.com/abdullah2221/portfolio'
 }
